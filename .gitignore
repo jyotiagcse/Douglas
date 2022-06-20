@@ -1,0 +1,8 @@
+cypress/reports/
+node_modules
+cypress/videos/
+cypress/screenshots/
+mochawesome-report/
+.idea/
+package-lock.json
+xunit.xml

@@ -1,0 +1,32 @@
+{
+  "name": "douglas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "generate_cucumber_report": "node custom-reporter.js",
+    "test": "npx cypress run --spec \"cypress/e2e/cucumber/login.feature\" --browser chrome",
+    "openMode" : "npx cypress open"
+  },
+  "keywords": [],
+  "author": "Jyoti Agrawal",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^10.1.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "fs-extra": "^10.1.0",
+    "multiple-cucumber-html-reporter": "^1.21.4",
+    "mocha": "10.0.0",
+    "prettier": "2.7.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "step_definitions": "cypress/e2e/cucumber/",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/reports/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  }
+}
